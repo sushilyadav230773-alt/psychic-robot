@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RajRatan helps you buy, sell, and rent premium properties across India." />
+  <title>RajRatan | Premium Real Estate in India</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    <a href="#" class="logo" data-page="home">
+  <img src="logo.png" alt="RajRatan Logo" class="logo-img">
+  <a href="#" class="logon" data-page="home">
+  <span>Raj</span>Ratan
+</a>
+</a>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="listings">Properties</a></li>
+      <li><a href="#" data-page="about">About</a></li>
+      <li><a href="#" data-page="contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="page active">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Premium Real Estate Services in India</p>
+        <h1>Find Your Dream Property with RajRatan</h1>
+        <p>
+          Buy, sell, and rent verified residential and commercial properties with trusted local experts.
+        </p>
+
+        <form class="search-box">
+          <input type="text" placeholder="Location" />
+          <select>
+            <option>Property Type</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Office</option>
+            <option>Plot</option>
+          </select>
+          <select>
+            <option>Budget</option>
+            <option>₹25L - ₹50L</option>
+            <option>₹50L - ₹1Cr</option>
+            <option>₹1Cr - ₹3Cr</option>
+            <option>₹3Cr+</option>
+          </select>
+          <select>
+            <option>Buy</option>
+            <option>Rent</option>
+          </select>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Listings</p>
+        <h2>Premium Properties</h2>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury villa">
+          <div>
+            <h3>Luxury Villa</h3>
+            <p>Mumbai, Maharashtra</p>
+            <strong>₹3.2 Cr</strong>
+            <div class="features">4 Beds · 4 Baths · 3,200 sq.ft</div>
+            <button data-page="details">View Details</button>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" alt="Modern apartment">
+          <div>
+            <h3>Skyline Apartment</h3>
+            <p>Pune, Maharashtra</p>
+            <strong>₹92 Lakh</strong>
+            <div class="features">3 Beds · 2 Baths · 1,450 sq.ft</div>
+            <button data-page="details">View Details</button>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3" alt="Premium bungalow">
+          <div>
+            <h3>Premium Bungalow</h3>
+            <p>Ahmedabad, Gujarat</p>
+            <strong>₹1.8 Cr</strong>
+            <div class="features">4 Beds · 3 Baths · 2,600 sq.ft</div>
+            <button data-page="details">View Details</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark">
+      <div class="section-heading">
+        <p class="eyebrow">Why Choose Us</p>
+        <h2>Why RajRatan?</h2>
+      </div>
+
+      <div class="benefits">
+        <div>
+          <h3>Verified Properties</h3>
+          <p>Every listing is carefully reviewed for accuracy and transparency.</p>
+        </div>
+        <div>
+          <h3>Local Market Experts</h3>
+          <p>Get guidance from professionals who understand Indian property markets.</p>
+        </div>
+        <div>
+          <h3>End-to-End Support</h3>
+          <p>From discovery to documentation, our team supports every step.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Client Stories</p>
+        <h2>Testimonials</h2>
+      </div>
+
+      <div class="testimonials">
+        <blockquote>
+          “RajRatan helped us find a beautiful home in Pune within our budget.”
+          <span>- Priya Sharma</span>
+        </blockquote>
+        <blockquote>
+          “Professional service, clear communication, and verified properties.”
+          <span>- Amit Mehta</span>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to buy, sell, or rent?</h2>
+      <p>Speak with a RajRatan property advisor today.</p>
+      <button data-page="contact">Contact Us</button>
+    </section>
+  </section>
+
+  <!-- LISTINGS -->
+  <section id="listings" class="page">
+    <section class="page-hero">
+      <h1>Property Listings</h1>
+      <p>Browse verified properties for sale and rent.</p>
+    </section>
+
+    <section class="section">
+      <div class="filters">
+        <input type="text" id="cityFilter" placeholder="City">
+        <select id="typeFilter">
+          <option value="">Property Type</option>
+          <option>Apartment</option>
+          <option>Villa</option>
+          <option>Office</option>
+        </select>
+        <select id="availabilityFilter">
+          <option value="">Availability</option>
+          <option>Buy</option>
+          <option>Rent</option>
+        </select>
+        <select id="priceFilter">
+          <option value="">Price Range</option>
+          <option value="low">Below ₹1 Cr</option>
+          <option value="mid">₹1 Cr - ₹2 Cr</option>
+          <option value="high">Above ₹2 Cr</option>
+        </select>
+      </div>
+
+      <div class="property-grid" id="listingGrid"></div>
+    </section>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="details" class="page">
+    <section class="page-hero">
+      <h1>Property Details</h1>
+      <p>Luxury villa designed for modern Indian families.</p>
+    </section>
+
+    <section class="section details-layout">
+      <div>
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Property exterior">
+          <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e" alt="Living room">
+          <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b" alt="Bedroom">
+        </div>
+
+        <h2>Luxury Villa in Mumbai</h2>
+        <p class="location">Bandra West, Mumbai, Maharashtra</p>
+        <h3 class="price">₹3.2 Cr</h3>
+
+        <div class="features detail-features">
+          4 Bedrooms · 4 Bathrooms · 3,200 sq.ft · Garden · Parking · Modular Kitchen
+        </div>
+
+        <p>
+          This premium villa offers elegant interiors, spacious rooms, natural light, secure parking,
+          and excellent connectivity to schools, hospitals, business districts, and lifestyle destinations.
+        </p>
+
+        <div class="map-placeholder">
+          Google Maps Location Placeholder
+        </div>
+      </div>
+
+      <aside class="inquiry-box">
+        <h3>Send Inquiry</h3>
+        <form class="lead-form">
+          <input type="text" placeholder="Full Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="email" placeholder="Email Address">
+          <textarea placeholder="I am interested in this property"></textarea>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </aside>
+    </section>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="page">
+    <section class="page-hero">
+      <h1>About RajRatan</h1>
+      <p>Trusted real estate advisors for modern India.</p>
+    </section>
+
+    <section class="section about-grid">
+      <div>
+        <p class="eyebrow">Our Story</p>
+        <h2>Built on trust, transparency, and local expertise.</h2>
+        <p>
+          RajRatan was founded to simplify real estate decisions for Indian families, investors,
+          business owners, and NRIs. We combine professional service with verified property options
+          and practical market knowledge.
+        </p>
+      </div>
+
+      <div class="values">
+        <h3>Mission & Values</h3>
+        <p>To make property buying, selling, and renting easier, safer, and more transparent.</p>
+        <ul>
+          <li>Integrity</li>
+          <li>Client-first guidance</li>
+          <li>Verified listings</li>
+          <li>Long-term relationships</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Our Team</p>
+        <h2>Meet the Experts</h2>
+      </div>
+
+      <div class="team">
+        <div>
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Team member">
+          <h3>Rajesh Ratan</h3>
+          <p>Founder & Property Consultant</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2" alt="Team member">
+          <h3>Neha Shah</h3>
+          <p>Residential Sales Advisor</p>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Team member">
+          <h3>Vikram Patel</h3>
+          <p>Commercial Leasing Expert</p>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page">
+    <section class="page-hero">
+      <h1>Contact RajRatan</h1>
+      <p>Let us help you make the right property decision.</p>
+    </section>
+
+    <section class="section contact-grid">
+      <form class="contact-form lead-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address">
+        <select>
+          <option>Looking to Buy</option>
+          <option>Looking to Rent</option>
+          <option>Looking to Sell</option>
+        </select>
+        <textarea placeholder="Tell us your requirement"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> hello@rajratanrealty.in</p>
+        <p><strong>Address:</strong> RajRatan Realty, Mumbai, Maharashtra, India</p>
+
+        <div class="map-placeholder">
+          Google Maps Section
+        </div>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<a href="https://wa.me/919876543210" class="whatsapp" target="_blank" aria-label="Contact on WhatsApp">
+  WhatsApp
+</a>
+
+<footer class="footer">
+  <div>
+    <h3><span>Raj</span>Ratan</h3>
+    <p>Premium real estate services for buying, selling, and renting properties in India.</p>
+  </div>
+
+  <div>
+    <h4>Quick Links</h4>
+    <a href="#" data-page="home">Home</a>
+    <a href="#" data-page="listings">Properties</a>
+    <a href="#" data-page="about">About</a>
+    <a href="#" data-page="contact">Contact</a>
+  </div>
+
+  <div>
+    <h4>Follow Us</h4>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">LinkedIn</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
